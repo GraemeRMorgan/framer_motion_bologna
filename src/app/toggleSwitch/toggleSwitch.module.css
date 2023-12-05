@@ -1,0 +1,56 @@
+.fancyFont {
+    font-variation-settings:
+        "MONO" 0,
+        "CASL" 1,
+        "wght" 725,
+        "wdth" 125,
+        "slnt" 0,
+        "CRSV" 1;
+}
+
+.plainFont {
+    font-variation-settings:
+        "MONO" 1,
+        "CASL" 0,
+        "wght" 725,
+        "wdth" 125,
+        "slnt" 0,
+        "CRSV" 0.5;
+}
+
+.flexContainer {
+    flex-direction: column;
+    gap: var(--padding-large);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: var(--color-decorative-500);
+}
+
+.buttonVar1 {
+    background-color: var(--color-gray-200);
+    border: 2px solid var(--color-gray-300);
+    color: var(--color-gray-900);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: var(--padding-medium) var(--padding-large);
+    border-radius: var(--corner-medium);
+    font-family: var(--font-family);
+    font-variation-settings:
+        "MONO" 0,
+        "CASL" 0,
+        "wght" 725,
+        "wdth" 125,
+        "slnt" 0,
+        "CRSV" 1;
+}
+
+.buttonVar1:hover {
+    border: 2px solid var(--color-gray-700);
+}

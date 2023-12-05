@@ -1,0 +1,163 @@
+.flexContainer {
+    height: 100px;
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 12px;
+    border-radius: var(--corner-medium);
+}
+
+
+.flexItem {
+    width: var(--border_block_outer);
+    height: var(--border_block_outer);
+    border: 2px dashed var(--color-gray-500);
+    border-radius: calc(var(--border_block_radius) + (var(--border_block_outer) - var(--border_block_inner)) / 2);
+    place-content: center;
+    display: grid;
+    perspective: 300px;
+}
+
+.innerBox {
+    width: var(--border_block_inner);
+    height: var(--border_block_inner);
+    align-items: center;
+    background-color: var(--color-primary-300);
+    border: 2px solid var(--color-gray-500);
+    border-radius: var(--border_block_radius);
+    cursor: pointer;
+}
+
+
+.innerBox.translate {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* .innerBox.translate:hover {
+    transform: translateX(20px);
+} */
+
+.innerBox.translate:active {
+    transform: translateX(-20px);
+}
+
+
+
+/* styles/TranslateDiv.module.css */
+.translatable-div {
+    width: var(--border_block_inner);
+    height: var(--border_block_inner);
+    align-items: center;
+    background-color: var(--color-primary-300);
+    border: 2px solid var(--color-gray-500);
+    border-radius: var(--border_block_radius);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    will-change: transition;
+    transition: transform 500ms ease-in-out;
+
+
+}
+
+.linear {
+    transform: translateX(200px);
+    transition-timing-function: linear;
+}
+
+.easeOut {
+    transform: translateX(200px);
+    transition-timing-function: ease-out;
+}
+
+.easeIn {
+    transform: translateX(200px);
+    transition-timing-function: ease-in;
+}
+
+.easeInOut {
+    transform: translateX(200px);
+    transition-timing-function: ease-in-out;
+}
+
+.rotateX300 {
+    transform: rotateX(75deg);
+    transition-timing-function: ease-in-out;
+}
+
+.rotateX1000 {
+    transform: rotateX(75deg);
+    transition-timing-function: ease-in-out;
+}
+
+
+/* For Keyframe Animation */
+.keyframeAnimation {
+    width: var(--border_block_inner);
+    height: var(--border_block_inner);
+    align-items: center;
+    background-color: var(--color-primary-300);
+    border: 2px solid var(--color-gray-500);
+    border-radius: var(--border_block_radius);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    will-change: transition;
+}
+
+.keyframeStart {
+    animation: stepper 1000ms;
+    transform-origin: center;
+    transition-timing-function: ease-out;
+}
+
+@keyframes stepper {
+    0% {
+        transform: translateX(0px);
+    }
+
+    20% {
+        transform: translateX(60px);
+    }
+
+    40% {
+        transform: translateX(-60px);
+    }
+
+    60% {
+        transform: translateX(30px);
+
+    }
+
+    80% {
+        transform: translateX(-15px);
+
+    }
+
+    100% {
+        transform: translateX(0px);
+
+    }
+}
+
+.motionButton {
+    margin-top: var(--padding-medium);
+    margin-left: 4px;
+    cursor: pointer;
+    padding: var(--padding-medium);
+    border-radius: var(--corner-medium);
+    background-color: var(--color-decorative-300);
+    will-change: transform;
+    transition: transform 100ms ease-in-out;
+}
+
+.motionButton:hover {
+    transform: translateY(-1px);
+}
+
+.motionButton:active {
+    background-color: var(--color-decorative-600);
+    outline: none
+}

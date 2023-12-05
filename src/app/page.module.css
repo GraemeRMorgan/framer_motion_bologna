@@ -1,0 +1,113 @@
+.red {
+  color: red;
+}
+
+.inlineContainer {
+  /* display: inline; */
+  margin: 12px 12px;
+  width: 100%;
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.slantyFont {
+  font-weight: 1025;
+  font-stretch: 125%;
+  font-style: oblique -10deg;
+}
+
+.gridContainer {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media(max-width: 550px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.twoCols {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sectionCard {
+  margin: var(--padding-small);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background-color: whitesmoke;
+  color: black;
+  padding: 20px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+
+.outerCard {
+  /* border: 2px dashed var(--color-gray-300); */
+  border-radius: var(--corner-large);
+  border: 2px dashed var(--color-backdrop);
+}
+
+.outerCard:hover {
+  animation: borderReveal 100ms forwards;
+}
+
+@keyframes borderReveal {
+  0% {
+    border: 2px dashed var(--color-backdrop);
+  }
+
+  100% {
+    border: 2px dashed var(--color-gray-200);
+  }
+}
+
+.sectionCard.shadowLight {
+  /* box-shadow: inset 2px 2px 8px hsl(0deg 0% 0% / 0.33); */
+
+  box-shadow: var(--shadow-medium);
+  /* will-change: transform; */
+  /* transition: transform 300ms ease-in-out; */
+  transition-timing-function: ease-out;
+}
+
+
+.sectionCard:hover {
+  animation: shadowHover 700ms forwards;
+  transition-timing-function: ease-out;
+}
+
+
+
+
+@keyframes shadowHover {
+  0% {
+    box-shadow: var(--shadow-medium);
+  }
+
+  100% {
+    box-shadow: var(--shadow-high);
+  }
+}
+
+/* .sectionCard:active {
+  animation: shadowActive 200ms forwards;
+  transition-timing-function: ease-in;
+} */
+
+.topH2 {
+  position: relative;
+}

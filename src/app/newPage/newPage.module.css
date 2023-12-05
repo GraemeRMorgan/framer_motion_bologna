@@ -1,0 +1,19 @@
+.fancyFont {
+    font-variation-settings:
+        "MONO" 0,
+        "CASL" 1,
+        "wght" 725,
+        "wdth" 125,
+        "slnt" -15,
+        "CRSV" 1;
+}
+
+.plainFont {
+    font-variation-settings:
+        "MONO" 1,
+        "CASL" 0,
+        "wght" 725,
+        "wdth" 125,
+        "slnt" 0,
+        "CRSV" 0.5;
+}

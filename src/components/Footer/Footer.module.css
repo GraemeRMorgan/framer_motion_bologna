@@ -1,0 +1,10 @@
+.footerFont {
+    color: rgb(195, 195, 195);
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}

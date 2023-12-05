@@ -1,0 +1,73 @@
+.sectionCard {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px 20px;
+    border-radius: 8px;
+    /* border: 2px solid gray; */
+    text-decoration: none;
+
+}
+
+.sectionCard.shadowLight {
+    box-shadow: var(--shadow-medium);
+    /* will-change: box-shadow; */
+    /* will-change: transform; */
+    /* transition: transform 300ms ease-in-out; */
+    transition-timing-function: ease-out;
+}
+
+.cardAction {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px 20px;
+    border-radius: 8px;
+    /* border: 2px solid gray; */
+    text-decoration: none;
+    will-change: box-shadow;
+}
+
+
+
+.sectionCard:hover {
+    animation-delay: 200ms;
+    animation: shadowHover 500ms forwards;
+    transition-timing-function: ease-out;
+}
+
+.sectionCard.shadowLight.finished {
+    /* animation-delay: 100ms; */
+    animation: shadowHoverReverse 500ms forwards;
+    transition-timing-function: ease-in;
+}
+
+
+
+@keyframes shadowHover {
+    0% {
+        box-shadow: var(--shadow-medium);
+    }
+
+    100% {
+        box-shadow: var(--shadow-high);
+    }
+}
+
+@keyframes shadowHoverReverse {
+    0% {
+        box-shadow: var(--shadow-high);
+    }
+
+    100% {
+        box-shadow: var(--shadow-medium);
+    }
+}

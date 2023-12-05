@@ -1,0 +1,172 @@
+/* CSS Reset and Other Globals */
+
+/* This is a great reset - it gets rid of the annoying blue selection boxes on mobile. */
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background-color: var(--color-primary-500);
+  /* color: var(--color-gray-1000); */
+}
+
+::-webkit-scrollbar {
+  /* Track color */
+  width: 11px;
+  background-color: var(--color-backdrop-highlight);
+}
+
+::-webkit-scrollbar-thumb {
+  /* Thumb color */
+  border-radius: 1000px;
+  background-color: var(--color-backdrop);
+  border: 2px solid var(--color-primary-700);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-700);
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.list {
+  list-style: none;
+}
+
+.code {
+  background-color: rgb(64, 64, 64);
+  color: rgb(124, 221, 221);
+  padding: 1px 3px 2px 4px;
+  border-radius: 8px;
+}
+
+.codeWrapperBorder {
+  border: 2px solid var(--color-gray-300);
+
+  background-color: var(--code-background);
+  border-radius: var(--corner-large);
+  margin-bottom: 16px;
+}
+
+.container {
+  border: 2px dashed var(--color-gray-300);
+  padding: 6px;
+  margin: 12px 0px;
+
+}
+
+.line {
+
+  border-top: 2px solid var(--color-gray-300);
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.button {
+  border: 2px solidvar(--color-gray-500);
+  border-radius: 6px;
+  padding: 12px;
+  background-color: var(--color-primary-500);
+  color: var(--color-gray-1000);
+
+}
+
+.button.good {
+  background-color: var(--color-decorative-500);
+}
+
+.container.width {
+  padding: 0px;
+}
+
+.pageMain {
+  width: var(--desktop-width);
+  margin: auto;
+}
+
+@media(max-width: 1500px) {
+  .pageMain {
+    width: var(--laptop-width)
+  }
+}
+
+@media (max-width: 1100px) {
+  .pageMain {
+    width: var(--tablet-width);
+  }
+}
+
+@media (max-width: 550px) {
+  .pageMain {
+    width: var(--mobile-width);
+  }
+}
+
+/* This is the main section cards on the homepage. */
+.sectionCard {
+  font-weight: 600;
+  background-color: whitesmoke;
+  color: black;
+  padding: 20px 20px;
+  border-radius: 8px;
+  border: 2px solid gray;
+  text-decoration: none;
+}
+
+.linkBack {
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+body {
+  font-size: 17px;
+  /* min-height: 100vh; */
+  /* min-height: 100svh; */
+  display: flex;
+  flex-direction: column;
+  background: var(--color-backdrop);
+  border-radius: var(--corner-medium);
+}
+
+html {
+  color: var(--color-text);
+  font-family: var(--font-family), sans-serif;
+  letter-spacing: -0.03125em;
+  /* This comes from JC */
+  background: var(--color-backdrop-highlight);
+  --header-height: 10rem;
+  /* This is the main font variation - site wide*/
+  font-variation-settings:
+    "MONO" 0,
+    "CASL" 0.53,
+    "wght" 725,
+    "wdth" 125,
+    "slnt" 0,
+    "CRSV" 0.5;
+  font-weight: 400;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  background: linear-gradient(to top,
+      var(--color-backdrop),
+      var(--color-backdrop-highlight));
+  margin: 8px;
+}

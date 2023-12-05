@@ -1,5 +1,5 @@
 
-# Playground
+# Framer Motion Bologna 📨
 This is just a simple code playground that I use to make projects. 
 
 ## Getting Started
