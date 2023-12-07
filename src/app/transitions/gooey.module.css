@@ -23,13 +23,13 @@
     gap: var(--padding-large);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.circle {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+.cube {
+    width: 200px;
+    height: 200px;
+    border-radius: var(--corner-large);
     background-color: var(--color-decorative-500);
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
 import Callout from '../components/Callout/Callout';
 import styles from './page.module.css'
 import './globals.css'
@@ -12,12 +12,14 @@ import ThreeBreaks from '@/components/ThreeBreaks';
 import { Code } from 'react-feather';
 
 function Home() {
-
+  const hello = () => {
+    return "World"
+  }
   return (
     <main className="pageMain">
+      <Callout message={"This site is an overview of the basics of using Framer Motion. This will go over: the basics, layout animations, and shared layout animations."} />
       <div className={styles.gridContainer}>
-      <Link href="./newPage" className={`${styles.sectionCard} ${styles.shadowLight}`}>New Page</Link>
-      <Link href="./gooey" className={`${styles.sectionCard} ${styles.shadowLight}`}>Gooey Animation</Link>
+      <Link href="./transitions" className={`${styles.sectionCard} ${styles.shadowLight}`}>Transitions</Link>
       <Link href="./toggleSwitch" className={`${styles.sectionCard} ${styles.shadowLight}`}>Toggle Switch</Link>
       </div>
       <ThreeBreaks />
