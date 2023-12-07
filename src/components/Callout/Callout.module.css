@@ -12,14 +12,14 @@
 }
 
 .lightbulb {
-    background-color: var(--color-gray-0);
-    border: 2px solid var(--color-primary-700);
+    background-color: var(--color-gray-300);
+    border: 2px solid var(--color-gray-500);
     position: relative;
     /* display: inline-block; */
     top: 0px;
     border-radius: 50%;
-    height: 32px;
-    width: 32px;
+    height: 36px;
+    width: 36px;
     text-align: center;
     padding-top: 3px;
     padding-right: 1px;

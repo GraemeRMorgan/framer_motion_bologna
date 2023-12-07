@@ -15,6 +15,7 @@
     "bright": "^0.8.4",
     "framer-motion": "^10.16.12",
     "js-cookie": "^3.0.5",
+    "new-component": "^5.0.2",
     "next": "latest",
     "re-resizable": "^6.9.11",
     "react": "latest",

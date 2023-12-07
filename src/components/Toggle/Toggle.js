@@ -1,18 +1,23 @@
+"use client";
 import React from 'react';
 import styles from './Toggle.module.css';
 import { motion } from 'framer-motion';
 import ThreeBreaks from '../ThreeBreaks';
 
-function Toggle({ value, onChange, ...delegated }) {
+// function Toggle({ value, onChange, ...delegated }) {
+function Toggle() {
+
+  const [isEnabled, setIsEnabled] = React.useState(false);
+
   return (
     <div>
       <button
         type="button"
         role="switch"
-        aria-checked={value}
+        aria-checked={isEnabled}
         className={styles.wrapper}
-        onClick={() => onChange(!value)}
-        {...delegated}>
+        onClick={() => setIsEnabled(!isEnabled)}
+        >
         <motion.span
           className={styles.ball}
           initial={false}
@@ -22,14 +27,10 @@ function Toggle({ value, onChange, ...delegated }) {
             damping: 50,
           }}
           animate={{
-            x: value ? '100%' : '0%',
+            x: isEnabled ? '100%' : '0%',
           }}
         />
-      </button>
-      <ThreeBreaks />
-      <ThreeBreaks />
-      <ThreeBreaks />
-      <ThreeBreaks />
+        </button>
     </div>
   );
 }

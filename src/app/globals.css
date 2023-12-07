@@ -91,7 +91,7 @@ a {
 
 .pageMain {
   width: var(--desktop-width);
-  margin: auto;
+  margin: 0 auto;
 }
 
 @media(max-width: 1500px) {
@@ -149,12 +149,12 @@ html {
   /* This is the main font variation - site wide*/
   font-variation-settings:
     "MONO" 0,
-    "CASL" 0.53,
-    "wght" 725,
+    "CASL" 0,
+    "wght" 400,
     "wdth" 125,
     "slnt" 0,
-    "CRSV" 0.5;
-  font-weight: 400;
+    "CRSV" 1;
+  
 }
 
 body::before {
