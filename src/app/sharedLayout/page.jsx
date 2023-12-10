@@ -1,29 +1,23 @@
 import React from "react";
 import Link from "next/link";
-import styles from './layoutAnimation.module.css';
+import styles from './sharedLayout.module.css';
 import "../globals.css";
 import ThreeBreaks from "@/components/ThreeBreaks";
 import CodeBright from "@/components/CodeBright";
 import LayoutMotion from "@/components/LayoutMotion";
 
-const LayoutAnimation = () => {
+const SharedLayout = () => {
   const code = 
-  `<motion.div
-    layout={true}
-    transition={SPRING}
-    className={'cube' isMaximized ? 'cube2' : ''}'}
-    onClick={() => setIsMaximized(!isMaximized)}>
-</motion.div>`.trim();
+  ``.trim();
 
 
     return (
 
         <div className="pageMain">
-            <h1 className={styles.fancyFont}>Layout Animation</h1>
+            <h1 className={styles.fancyFont}>Shared Layout</h1>
             <Link href="/" className="linkBack">🏡 Home</Link>
             <div className="line" />
-            <h1>Layout Animation</h1>
-            <p>Layout animation are likely the strongest tool of Framer Motion. </p>
+            <p>Shared layout allows you to share an animated element between elements. </p>
             <CodeBright code={code} />
 
             <div className={styles.flexContainer}>
@@ -37,5 +31,5 @@ const LayoutAnimation = () => {
     )
 
 }
-export default LayoutAnimation;
+export default SharedLayout;
 

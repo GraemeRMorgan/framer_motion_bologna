@@ -23,19 +23,13 @@
     gap: var(--padding-large);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .cube {
     width: 200px;
     height: 200px;
-    border-radius: var(--corner-medium);
-    background-color: var(--color-decorative-500);
-}
-.cube.cube2{
-    width: 400px;
-    height: 200px;
-    border-radius: var(--corner-medium);
+    border-radius: var(--corner-large);
     background-color: var(--color-decorative-500);
 }
 
@@ -61,46 +55,38 @@
     border: 2px solid var(--color-gray-700);
 }
 
-.parent[data-isOpen="true"] {
-    width: 400px;
-    height: 200px;
-  }
-  
-  .child {
-    width: 40px;
-    height: 40px;
-    background: #f107a3;
-    border-radius: 50%;
-  }
-
-  .wrapper {
+.wrapper {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 180px;
-    height: 180px;
-    background: hsl(161.98deg 100% 50%);
-    background: oklch(0.87 0.25 162.3);
-    color: black;
-    padding: 16px;
-    font-size: 1.5rem;
-    will-change: true;
-  
-    /*
-      NOTE: This property isn't doing anything anymore,
-      since we added `justify-content: center`. We can
-      safely remove it, but it may still be desirable in
-      certain situations (eg. if there's enough text to
-      line-wrap).
-    */
-    text-align: center;
+    flex-direction: column;
+    gap: 16px;
   }
-  
-  .wrapper.maximized {
-    position: absolute;
-    inset: 0;
-    width: revert;
-    height: revert;
+  .demoArea {
+    display: flex;
+    gap: 4px;
+    min-height: 200px;
+    border: 1px solid hsl(210deg 15% 18%);
+    padding: 4px;
   }
-  
-  
+  .flexItem {
+    background: hsl(210deg 15% 18%);
+    padding: 8px;
+  }
+  .controls {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .selectControl {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .selectControl select {
+    font-size: 1rem;
+    padding: 8px;
+    border: 1px solid hsl(210deg 15% 18%);
+    background: hsl(210deg 15% 6%);
+    border-radius: 4px;
+  }

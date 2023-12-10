@@ -25,6 +25,8 @@ function Home() {
           <Link href='./keyframes' className={`${styles.sectionCard} ${styles.shadowLight}`}>Keyframes</Link>
           <Link href='./gestures' className={`${styles.sectionCard} ${styles.shadowLight}`}>Gestures</Link>
           <Link href='./layoutAnimation' className={`${styles.sectionCard} ${styles.shadowLight}`}>Layout</Link>
+          {/* <Link href='./layoutDemo' className={`${styles.sectionCard} ${styles.shadowLight}`}>Layout Demo</Link> */}
+          <Link href='./sharedLayout' className={`${styles.sectionCard} ${styles.shadowLight}`}>Shared Layout</Link>
         </div>
         <ThreeBreaks />
         <ThreeBreaks />

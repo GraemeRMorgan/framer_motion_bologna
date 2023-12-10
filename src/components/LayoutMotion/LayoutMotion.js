@@ -3,25 +3,29 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './LayoutMotion.module.css';
 
+
 function LayoutMotion() {
-  
 
-  return( 
-    <div>
+  const [isMaximized, setIsMaximized] = React.useState(false);
+  const SPRING = {
+    type: 'spring',
+    stiffness: 200,
+    damping: 40,
+  };
+
+  return (
+    <>
       <motion.div
-        className={styles.cube}
-        initial = {{
-          opacity: 0.8
-        }}
-        whileHover={{
-          scale: 1.1,
-          opacity: 1
-        }}
-        
-      />
-
-    </div>);
+        layout={true}
+        transition={SPRING}
+        className={`${styles.cube} ${isMaximized ? styles.cube2 : ''}`}
+        onClick={() => setIsMaximized(!isMaximized)}
+      >
+      </motion.div>
   
+    </>
+    );
+
 }
 
 export default LayoutMotion;

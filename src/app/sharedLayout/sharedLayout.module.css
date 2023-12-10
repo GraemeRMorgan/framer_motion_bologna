@@ -29,13 +29,7 @@
 .cube {
     width: 200px;
     height: 200px;
-    border-radius: var(--corner-medium);
-    background-color: var(--color-decorative-500);
-}
-.cube.cube2{
-    width: 400px;
-    height: 200px;
-    border-radius: var(--corner-medium);
+    border-radius: var(--corner-large);
     background-color: var(--color-decorative-500);
 }
 
@@ -60,47 +54,3 @@
 .buttonVar1:hover {
     border: 2px solid var(--color-gray-700);
 }
-
-.parent[data-isOpen="true"] {
-    width: 400px;
-    height: 200px;
-  }
-  
-  .child {
-    width: 40px;
-    height: 40px;
-    background: #f107a3;
-    border-radius: 50%;
-  }
-
-  .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 180px;
-    height: 180px;
-    background: hsl(161.98deg 100% 50%);
-    background: oklch(0.87 0.25 162.3);
-    color: black;
-    padding: 16px;
-    font-size: 1.5rem;
-    will-change: true;
-  
-    /*
-      NOTE: This property isn't doing anything anymore,
-      since we added `justify-content: center`. We can
-      safely remove it, but it may still be desirable in
-      certain situations (eg. if there's enough text to
-      line-wrap).
-    */
-    text-align: center;
-  }
-  
-  .wrapper.maximized {
-    position: absolute;
-    inset: 0;
-    width: revert;
-    height: revert;
-  }
-  
-  
